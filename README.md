@@ -1,8 +1,3 @@
-¡Con gusto! Aquí tienes un archivo `README.md` claro, didáctico y bien estructurado para acompañar tu repositorio de la aplicación.
-
----
-
-```markdown
 # ✈️ Aplicación interactiva: Asignación de capacidad y maximización de ingresos
 
 Esta aplicación fue desarrollada como parte del curso de Analítica para la Inteligencia de Negocios, y tiene como objetivo ayudarte a explorar y comprender los principios del **Revenue Management** mediante una interfaz interactiva construida con Streamlit.
@@ -100,7 +95,3 @@ Profesor del curso *Analítica para la Inteligencia de Negocios*
 ¿Listo para aprender a tomar decisiones inteligentes con recursos limitados?  
 ¡Dale run a la app y comienza a explorar! 🎯📊
 ```
-
----
-
-¿Deseas que también prepare un archivo `requirements.txt` mínimo para asegurar que funcione el entorno?
