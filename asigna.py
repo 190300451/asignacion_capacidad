@@ -3,9 +3,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 
+st.logo("imagenes/El alma máter de Cancún-07.png", size="large")
+
 def intro():
+
+    col1, col2, col3 = st.columns([2,2,2])
+    with col2:
+        st.image("imagenes/Logoucaribe.png", width=120)
+
+    st.image("imagenes/El alma máter de Cancún-05.png", use_container_width=True)
+
     st.markdown("""
-                # ¡Bienvenid@! 🌟
+    ---
+# ¡Bienvenid@! 🌟
 
 Imagina que tienes un número limitado de lugares en un avión, un autobús, o incluso en un concierto. ¿A quién se los deberías vender primero? ¿A quienes compran con anticipación buscando buen precio? ¿O a quienes compran a última hora, tal vez con urgencia, y están dispuestos a pagar más?
 
@@ -35,7 +45,24 @@ En las siguientes secciones, podrás experimentar con diferentes escenarios, aju
 > **Distribuir bien la capacidad es clave para tomar decisiones inteligentes cuando los recursos son limitados.**
 
 ¡Vamos a descubrir cómo hacerlo! 🚀 
+                
+---
+
+## 🏫 Autoría y contexto académico
+
+Esta aplicación fue desarrollada por **Héctor Fernando Gómez-García**, profesor de la **Universidad del Caribe** 🇲🇽, como parte del curso:
+
+### *Analítica para la Inteligencia de Negocios*
+
+📘 Ingeniería en Datos e Inteligencia Organizacional  
+📍 Cancún, Quintana Roo
+
                 """)
+    st.markdown("---")
+    col1, col2, col3 = st.columns([2,2,2])
+    with col2:
+        st.page_link(p_segmentos, label="Siguiente", icon=":material/arrow_forward:")
+
     
 def segmentos():
     st.markdown("""
@@ -75,12 +102,21 @@ A continuación, exploraremos cómo podemos utilizar esta información para toma
     )
     st.image("markt_seg.png", caption="Segmentación del mercado",  use_container_width=True)
 
-def supuestos():
-    import matplotlib.pyplot as plt
-    import numpy as np
-    from scipy.stats import norm
-    import streamlit as st
+    st.markdown(
+        """
+            ---
+        """
+    )
 
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(home, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_supuestos, label="Siguiente", icon=":material/arrow_forward:")
+
+
+def supuestos():
+    
     st.markdown("""
 # Supuestos del modelo
 
@@ -172,6 +208,17 @@ Los valores de $ \mu $ y $ \sigma $ para cada clase representan el comportamient
                
 """
     )
+    st.markdown(
+        """
+            ---
+        """
+    )
+
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_segmentos, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_elementos, label="Siguiente", icon=":material/arrow_forward:")
 
 
 def elementos():
@@ -218,6 +265,18 @@ Con estos elementos en mente, ya podemos avanzar al análisis visual de las dist
 
                 """
     )
+    st.markdown(
+        """
+            ---
+        """
+    )
+
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_supuestos, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_distribuciones, label="Siguiente", icon=":material/arrow_forward:")
+
 
 
 def pagina_distribuciones():
@@ -343,6 +402,19 @@ Mientras ajustas el valor de $ b $ en la gráfica, considera lo siguiente:
         """
     )
 
+    st.markdown(
+        """
+            ---
+        """
+    )
+
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_elementos, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_probabilidades, label="Siguiente", icon=":material/arrow_forward:")
+
+
 def pagina_probabilidades():
     
     st.markdown("""
@@ -435,6 +507,18 @@ Mientras exploras las curvas de probabilidad de desbordamiento y ajustas el valo
 
         """
         )
+    st.markdown(
+        """
+            ---
+        """
+    )
+
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_distribuciones, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_ingreso_exploracion, label="Siguiente", icon=":material/arrow_forward:")
+
     
 
 def pagina_ingreso_exploracion():
@@ -549,6 +633,18 @@ Mientras exploras el comportamiento del ingreso esperado y las probabilidades de
 
 """
 )
+    st.markdown(
+        """
+            ---
+        """
+    )
+
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_probabilidades, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_formula_marginal, label="Siguiente", icon=":material/arrow_forward:")
+
 
 def pagina_formula_marginal():
     st.markdown("""
@@ -635,6 +731,18 @@ Nos dice si **vale la pena seguir cediendo espacios a la clase B**, o si **es mo
 > En la siguiente página, usaremos esta expresión para **ubicar el valor de $ b $** donde el ingreso ya no aumenta más…  
 > o incluso **empieza a disminuir**. 🧠💰
 """)
+    st.markdown(
+        """
+            ---
+        """
+    )
+
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_ingreso_exploracion, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_optimo_teorico, label="Siguiente", icon=":material/arrow_forward:")
+
 
 def pagina_optimo_teorico():
     
@@ -754,11 +862,17 @@ Mientras que en R:
                 y_star <- qnorm(1 - (p_B / p_A), mean = mu_A, sd = sigma_A)
 ```
     """)
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_formula_marginal, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_ejemplo_resuelto_estatico, label="Siguiente", icon=":material/arrow_forward:")
+
 
 
 def pagina_ejemplo_resuelto_estatico():
-    import streamlit as st
-
+    
     st.set_page_config(page_title="Ejemplo resuelto", layout="centered")
     st.title("Ejemplo resuelto: ¿Cuántos asientos debo reservar para clase B?")
 
@@ -833,11 +947,16 @@ Para maximizar los ingresos:
 
 Así logras un equilibrio entre aprovechar las ventas anticipadas **sin dejar fuera a quienes pagan más**. 🎯
     """)
+    
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_optimo_teorico, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_ejemplo_editorial, label="Siguiente", icon=":material/arrow_forward:")
 
 
 def pagina_ejemplo_editorial():
-    import streamlit as st
-
     st.set_page_config(page_title="Ejemplo editorial", layout="centered")
     st.title("Ejemplo 2: ¿Cuántos libros debo proteger para el mercado principal?")
 
@@ -906,6 +1025,14 @@ Para maximizar los ingresos:
 Así se garantiza que el mercado de mayor valor **no quede desatendido**, y al mismo tiempo se aprovecha el exceso de demanda global 🌍.
     """)
 
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_ejemplo_resuelto_estatico, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_emsr, label="Siguiente", icon=":material/arrow_forward:")
+
+
 
 def pagina_emsr():
     st.set_page_config(page_title="Múltiples clases (EMSR)", layout="centered")
@@ -943,7 +1070,7 @@ Existen variantes, pero aquí explicaremos la más conocida: **EMSR-a**.
 
 ### 🚪 EMSR-a: protegiendo a los que pagan más
 
-La idea es sencilla: cuando estás a punto de abrir la venta a una clase de menor precio, digamos la clase \( j+1 \), quieres proteger cierto número de unidades para las clases que pagan más: \( 1, 2, \ldots, j \).
+La idea es sencilla: cuando estás a punto de abrir la venta a una clase de menor precio, digamos la clase $ j+1 $, quieres proteger cierto número de unidades para las clases que pagan más: $ 1, 2, \ldots, j $.
 
 ¿Cómo? Aplicando la regla de Littlewood entre la clase $ j+1 $ y **cada una de las superiores**, de forma independiente.
 
@@ -972,6 +1099,13 @@ Y se ha convertido en una herramienta clave en el Revenue Management moderno.
 
 ¿Te gustaría ver cómo se aplica esto con datos reales o con un ejemplo interactivo? 😄
     """)
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_ejemplo_editorial, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_ejemplo_emsr, label="Siguiente", icon=":material/arrow_forward:")
+
 
 def pagina_ejemplo_emsr():
     
@@ -1052,6 +1186,14 @@ Debes proteger aproximadamente **819 boletos** para las clases que pagan más, y
 
 Esta estrategia te permite maximizar ingresos, **sin cerrar las puertas a quienes valoran más el evento**. 🎫💰
     """)
+    
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_emsr, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_emsr_b, label="Siguiente", icon=":material/arrow_forward:")
+
 
 def pagina_emsr_b():
     st.set_page_config(page_title="EMSR-b", layout="centered")
@@ -1074,7 +1216,7 @@ En lugar de aplicar muchas reglas individuales, en EMSR-b construimos una **clas
 ### 🛠️ ¿Cómo se construye esta clase ficticia?
 
 Supongamos que estamos por abrir la clase $ j+1 $, y queremos proteger asientos para las clases más rentables:  
-$ 1, 2, \ldots, j $
+$1, 2, \ldots, j$
 
 Agrupamos todas esas clases en una sola, con los siguientes parámetros:
 
@@ -1123,6 +1265,14 @@ $$
 > EMSR-b es una gran herramienta para cuando necesitas una decisión rápida pero fundamentada.  
 > En la siguiente página podrás probarla con un ejemplo. 📊
 """)
+    
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_ejemplo_emsr, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_ejemplo_emsr_b, label="Siguiente", icon=":material/arrow_forward:")
+
 
 
 def pagina_ejemplo_emsr_b():
@@ -1193,11 +1343,18 @@ Eso significa que esta semana (clase $ c_3 $) solo deberías vender **hasta 185 
 
 EMSR-b te ofrece una forma rápida y efectiva de tomar esta decisión sin necesidad de múltiples comparaciones. 💡
     """)
+    
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_emsr_b, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_resumen, label="Siguiente", icon=":material/arrow_forward:")
+
 
 
 def pagina_resumen():
-    import streamlit as st
-
+    
     st.set_page_config(page_title="Resumen", layout="centered")
     st.title("📌 Resumen de conceptos clave")
 
@@ -1259,6 +1416,14 @@ Recuerda que el Revenue Management es una combinación de **modelo, intuición y
 ¡Gracias por formar parte de este recorrido! 🙌
     """)
 
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns([2,2,2,2])
+    with col2:
+        st.page_link(p_ejemplo_emsr_b, label="Anterior", icon=":material/arrow_back:")
+    with col3:
+        st.page_link(p_practica_emsr, label="Siguiente", icon=":material/arrow_forward:")
+
+
 def pagina_practica_emsr():
     
     st.set_page_config(page_title="Ponlo en práctica (EMSR)", layout="centered")
@@ -1316,28 +1481,50 @@ y compara el nivel de protección sugerido por **EMSR-a** y **EMSR-b**.
 
     st.success(f"🔒 Nivel de protección recomendado:\n\n- EMSR-a: {y_emsr_a:.0f} unidades\n- EMSR-b: {y_emsr_b:.0f} unidades")
 
+    st.markdown("---")
+    col1, col2, col3 = st.columns([2,2,2])
+    with col2:
+        st.page_link(p_resumen, label="Anterior", icon=":material/arrow_back:")
+    
 
 
+home = st.Page(intro, title="Introducción", icon=":material/home:")
+p_segmentos = st.Page(segmentos, title="Segmentación del mercado", icon=":material/price_check:")
+p_supuestos = st.Page(supuestos, title="Supuestos del modelo", icon=":material/psychology:")
+p_elementos = st.Page(elementos, title="Elementos clave", icon=":material/settings:")
+p_distribuciones = st.Page(pagina_distribuciones, title="Distribuciones de demanda", icon=":material/grouped_bar_chart:")
+p_probabilidades = st.Page(pagina_probabilidades, title="Probabilidad de desbordamiento", icon=":material/stacked_line_chart:")
+p_ingreso_exploracion = st.Page(pagina_ingreso_exploracion, title="Ingreso esperado", icon=":material/paid:")
+p_formula_marginal = st.Page(pagina_formula_marginal, title="Construyendo la fórmula del ingreso marginal", icon=":material/psychology_alt:")
+p_optimo_teorico = st.Page(pagina_optimo_teorico, title="Condición óptima", icon=":material/flag:")
+p_ejemplo_resuelto_estatico = st.Page(pagina_ejemplo_resuelto_estatico, title="Ejemplo 1: Vuelo y límite de reserva óptimo", icon=":material/task_alt:")
+p_ejemplo_editorial = st.Page(pagina_ejemplo_editorial, title="Ejemplo 2: Editorial y protección óptima", icon=":material/menu_book:")
+p_emsr = st.Page(pagina_emsr, title="Múltiples clases (EMSR)", icon=":material/grouped_bar_chart:")
+p_ejemplo_emsr = st.Page(pagina_ejemplo_emsr, title="Ejemplo 3: Quidditch y EMSR-a", icon=":material/sports_esports:")
+p_emsr_b = st.Page(pagina_emsr_b, title="EMSR-b", icon=":material/insights:")
+p_ejemplo_emsr_b = st.Page(pagina_ejemplo_emsr_b, title="Ejemplo 4: EMSR-b aplicado al Quidditch", icon=":material/stars:")
+p_resumen = st.Page(pagina_resumen, title="Resumen", icon=":material/flag_circle:")
+p_practica_emsr = st.Page(pagina_practica_emsr, title="Ponlo en práctica (EMSR)", icon=":material/science:")
 
-
-pages = [st.Page(intro, title="Introducción", icon=":material/home:"), 
-         st.Page(segmentos, title="Segmentación del mercado", icon=":material/price_check:"),
-         st.Page(supuestos, title="Supuestos del modelo", icon=":material/psychology:"),
-         st.Page(elementos, title="Elementos clave", icon=":material/settings:"),
-         st.Page(pagina_distribuciones, title="Distribuciones de demanda", icon=":material/grouped_bar_chart:"),
-         st.Page(pagina_probabilidades, title="Probabilidad de desbordamiento", icon=":material/stacked_line_chart:"),
-         st.Page(pagina_ingreso_exploracion, title="Ingreso esperado", icon=":material/paid:"),
-         st.Page(pagina_formula_marginal, title="Construyendo la fórmula del ingreso marginal", icon=":material/psychology_alt:"),
-         st.Page(pagina_optimo_teorico, title="Condición óptima", icon=":material/flag:"),
-         st.Page(pagina_ejemplo_resuelto_estatico, title="Ejemplo 1: Vuelo y límite de reserva óptimo", icon=":material/task_alt:"),
-         st.Page(pagina_ejemplo_editorial, title="Ejemplo 2: Editorial y protección óptima", icon=":material/menu_book:"),
-         st.Page(pagina_emsr, title="Múltiples clases (EMSR)", icon=":material/grouped_bar_chart:"),
-         st.Page(pagina_ejemplo_emsr, title="Ejemplo 3: Quidditch y EMSR-a", icon=":material/sports_esports:"),
-         st.Page(pagina_emsr_b, title="EMSR-b", icon=":material/insights:"),
-         st.Page(pagina_ejemplo_emsr_b, title="Ejemplo 4: EMSR-b aplicado al Quidditch", icon=":material/stars:"),
-         st.Page(pagina_resumen, title="Resumen", icon=":material/flag_circle:"),
-         st.Page(pagina_practica_emsr, title="Ponlo en práctica (EMSR)", icon=":material/science:")         
-         ]
+pages = [
+    home, 
+    p_segmentos,
+    p_supuestos,
+    p_elementos,
+    p_distribuciones,
+    p_probabilidades,
+    p_ingreso_exploracion,
+    p_formula_marginal,
+    p_optimo_teorico,
+    p_ejemplo_resuelto_estatico,
+    p_ejemplo_editorial,
+    p_emsr,
+    p_ejemplo_emsr,
+    p_emsr_b,
+    p_ejemplo_emsr_b,
+    p_resumen,
+    p_practica_emsr                  
+]
 
 pg = st.navigation(pages)
 pg.run()
