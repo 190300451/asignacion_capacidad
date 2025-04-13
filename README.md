@@ -94,4 +94,14 @@ Profesor del curso *Analítica para la Inteligencia de Negocios*
 
 ¿Listo para aprender a tomar decisiones inteligentes con recursos limitados?  
 ¡Dale run a la app y comienza a explorar! 🎯📊
+
+---
+
+## 🪪 Licencia
+
+Este proyecto está distribuido bajo la licencia [MIT](LICENSE).  
+Eres libre de usar, modificar y compartir esta aplicación, siempre y cuando mantengas los créditos correspondientes.
+
+
 ```
+
